@@ -1,0 +1,127 @@
+doctype html
+html(ng-app='codoshopWebsite')
+	head
+		meta(charset='utf-8')
+
+		title Codoshop
+
+		meta(name='description', content='')
+
+		meta(name='viewport', content='width=device-width')
+		// Place favicon.ico and apple-touch-icon.png in the root directory
+
+		// build:css({.tmp,src}) styles/vendor.css
+		link(rel='stylesheet', href='../bower_components/HTML5-Reset/assets/css/reset.css')
+		// bower:css
+		link(rel='stylesheet', href='../bower_components/codemirror/lib/codemirror.css')
+		link(rel='stylesheet', href='../bower_components/fontawesome/css/font-awesome.css')
+		link(rel='stylesheet', href='../bower_components/codoshop/dist/codoshop.css')
+		link(rel='stylesheet', href='../bower_components/slick-carousel/slick/slick.css')
+		// endbower 
+		link(rel='stylesheet', href='../bower_components/jquery.ui/themes/base/all.css')
+		// endbuild 
+
+		// build:css({.tmp,src}) styles/app.css 
+		link(rel='stylesheet', href='app/index.css')
+		link(rel='stylesheet', href='app/main/type.css')
+		link(rel='stylesheet', href='app/main/main.css')
+		link(rel='stylesheet', href='components/modal/modal.css')
+		link(rel='stylesheet', href='components/donate/donate.css')
+		// endbuild
+	body(ng-attr-codoshop-websitee='')
+		main
+
+		// Google Analytics: change UA-XXXXX-X to be your site's ID.
+		script.
+			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+			e.src='//www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+			ga('create','UA-XXXXX-X');ga('send','pageview');
+
+		// build:js({.tmp,src}) scripts/vendor.js 
+		// bower:js
+		script(src='../bower_components/jquery/dist/jquery.js')
+		script(src='../bower_components/angular/angular.js')
+		script(src='../bower_components/angular-animate/angular-animate.js')
+		script(src='../bower_components/angular-cookies/angular-cookies.js')
+		script(src='../bower_components/angular-touch/angular-touch.js')
+		script(src='../bower_components/angular-sanitize/angular-sanitize.js')
+		script(src='../bower_components/angular-resource/angular-resource.js')
+		script(src='../bower_components/angular-route/angular-route.js')
+		script(src='../bower_components/codemirror/lib/codemirror.js')
+		script(src='../bower_components/angular-ui-codemirror/ui-codemirror.js')
+		script(src='../bower_components/chroma-js/chroma.js')
+		script(src='../bower_components/codoshop/dist/codoshop.js')
+		script(src='../bower_components/slick-carousel/slick/slick.min.js')
+		script(src='../bower_components/angular-slick-carousel/dist/slick.js')
+		script(src='../bower_components/angular-ui-router/release/angular-ui-router.js')
+		// endbower 
+		script(src='../bower_components/jquery.ui/ui/core.js')
+
+		script(src='../bower_components/jquery.ui/ui/widget.js')
+
+		script(src='../bower_components/jquery.ui/ui/position.js')
+
+		script(src='../bower_components/jquery.ui/ui/mouse.js')
+
+		script(src='../bower_components/jquery.ui/ui/sortable.js')
+
+		script(src='../bower_components/jquery.ui/ui/draggable.js')
+
+		script(src='../bower_components/jquery.ui/ui/resizable.js')
+
+		script(src='../bower_components/jquery.ui/ui/tooltip.js')
+
+		script(src='../bower_components/codemirror/mode/css/css.js')
+
+		script(src='../bower_components/codemirror/mode/htmlembedded/htmlembedded.js')
+
+		script(src='../bower_components/codemirror/mode/htmlmixed/htmlmixed.js')
+
+		script(src='../bower_components/codemirror/mode/javascript/javascript.js')
+
+		script(src='../bower_components/codemirror/mode/coffeescript/coffeescript.js')
+
+		script(src='../bower_components/codemirror/mode/xml/xml.js')
+
+		script(src='../bower_components/codemirror/addon/runmode/runmode.js')
+
+		script(src='../bower_components/codemirror/addon/comment/comment.js')
+
+		script(src='../bower_components/codemirror/addon/comment/continuecomment.js')
+
+		script(src='../bower_components/codemirror/addon/fold/foldcode.js')
+
+		script(src='../bower_components/codemirror/addon/fold/foldgutter.js')
+
+		script(src='../bower_components/codemirror/addon/fold/brace-fold.js')
+
+		script(src='../bower_components/codemirror/addon/fold/comment-fold.js')
+
+		script(src='../bower_components/codemirror/addon/fold/indent-fold.js')
+
+		script(src='../bower_components/codemirror/addon/fold/xml-fold.js')
+
+		script(src='../bower_components/codemirror/addon/fold/markdown-fold.js')
+
+		script(src='../bower_components/codemirror/addon/edit/closebrackets.js')
+
+		script(src='../bower_components/codemirror/addon/edit/closetag.js')
+
+		script(src='../bower_components/codemirror/addon/edit/matchbrackets.js')
+
+		script(src='../bower_components/codemirror/addon/edit/matchtags.js')
+		// endbuild 
+
+		// build:js({.tmp,src}) scripts/app.js 
+		script(src='app/index.js')
+		script(src='app/main/main.controller.js')
+		script(src='components/modal/modal.js')
+		script(src='components/donate/donate.js')
+
+		// inject:partials 
+		// angular templates will be automaticaly converted in js and inserted here
+		// endinject 
+		// endbuild 

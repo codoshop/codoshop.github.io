@@ -1,0 +1,24 @@
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+  text-align: center;
+
+  p + h4 {
+  margin-top: 28px;
+  }
+}
+
+.modal {
+	
+	// padding: 1.8rem 2.1rem 1.0rem 2.1rem;
+	padding: 0;
+	// padding: 2rem;
+	position: relative;
+	// background-color: rgba(#fff, 0.05);
+	box-shadow:
+		// -15px 15px 5px rgba(#fff, 0.5),
+		0 15px 15px rgba(#00232d, 0.5)
+		;
+	// border: 1px solid rgba(#fff, 0.1); 
+	// background-color: rgba(#fff, 0.05);
+}

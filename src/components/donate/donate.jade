@@ -1,0 +1,48 @@
+div(ng-attr-donate='')
+	a(ui-sref='index') back
+	header
+		h2 Donate
+		div You're donation keeps Codoshop alive. You can attach a suggestion to your donation that will help steer me in the direction.
+	.bar
+		div $
+		div 0
+		div
+			div
+				div(style='width: 230px')
+				div
+			.label windows support
+	.bar
+		div $
+		div 0
+		div
+			div
+				div
+				div
+			.label linux support
+	.bar
+		div $
+		div 40
+		div
+			div
+				div
+				div
+			.label performance
+	.bar
+		div $
+		div 0
+		div
+			.label > suggest something else?
+	.bar
+		div $
+		div 0
+		div
+			.label no suggestion
+	//- .bar
+	//- 	.label Pay how?
+	.btn-row
+		a(ng-selected='true', href='javascript:void(0)').fa.fa-paypal paypal
+		a(href='javascript:void(0)').fa.fa-gittip gittip
+		a(href='javascript:void(0)').fa.fa-cc-stripe stripe
+	//- a(href='javascript:void(0)').pay Submit donation
+
+
