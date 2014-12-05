@@ -1,7 +1,7 @@
 'use strict'
 
 angular
-	.module 'codoshopWebsiteDonate', []
+	.module 'codoshopDonate', []
 	.directive 'donate', () ->
 		link: (scope, el, attrs, ctrls) ->
 			

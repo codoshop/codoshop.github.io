@@ -9,8 +9,7 @@ angular
 		'ngResource'
 		'ui.router'
 		'codoshop'
-		'codoshopWebsiteModal'
-		'codoshopWebsiteDonate'
+		'codoshopModal'
 		'bardo.directives'
 	]
 	.config ($stateProvider, $urlRouterProvider) ->
@@ -19,7 +18,7 @@ angular
 				url: ''
 				views:
 					'modal':
-						templateUrl: 'components/modal/modal.html'
+						templateUrl: 'components/about/about.html'
 			.state 'donate',
 				url: '/donate'
 				views:

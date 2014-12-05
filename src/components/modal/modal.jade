@@ -1,32 +1,20 @@
-div(ng-attr-welcome='')
-	div
-		a(href='javascript:void(0)', ng-click='tryIt()').close
-			//- div.fa.fa-arrow-right
-			div Presenting
-			//- div.fa.fa-arrow-right
-	header
-		a(href='javascript:void(0)').fa.fa-download
-		div
-		div
-			.logo Codoshop
-			//- div "Quod nos facimus, nos."
-		div
-		a(ui-sref='donate').fa.fa-life-ring
-	//- .codoshop-subtitle "Quod nos facimus, nos."
-	p.
-		a <a href='javascript:void(0)'>text editor<a/> made for
-		artistic programmers. <a href='javascript:void(0)'>Free</a> and <a href='javascript:void(0)'>open-source.</a>
-		For <span>mac</span>// <span>windows</span>// <span>linux</span>// and the <span>web</span>.
-	//- .btn-row
-	//- 	a(href='javascript:void(0)')
-	//- 		span
-	//- 		span.label download
-	//- 		span
-	//- 	a(ui-sref='donate')
-	//- 		span
-	//- 		span.label donate
-	//- 		span
+//- div.codoshop-modal-btn-wrapper
+//- a(href='javascript:void(0)', ng-click='tryIt()').codoshop-btn-modal-close
+//- 	div About
 
 
+ul
+	li
+		a(ui-sref='index') About
+	li
+		a(href='javascript:void(0)') Download
+	li
+		a(ui-sref='donate') Donate
+	//- li
+	//- 	a(href='javascript:void(0)') More info
+	li
+	li
+		a(href='javascript:void(0)') Try it online &#187;
+div
 
-
+div(ui-view='modal')

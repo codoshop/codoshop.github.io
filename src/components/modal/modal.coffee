@@ -1,9 +1,9 @@
 'use strict'
 
 angular
-	.module 'codoshopWebsiteModal', []
-	.directive 'welcome', () ->
-		# templateUrl: 'components/modal/modal.html'
+	.module 'codoshopModal', ['codoshopAbout', 'codoshopDonate']
+	.directive 'modal', () ->
+		templateUrl: 'components/modal/modal.html'
 		link: (scope, el, attrs, ctrls) -> do (asd = null) ->
 			
 			scope.tryIt = do (scope) -> () ->
