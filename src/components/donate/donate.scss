@@ -1,7 +1,6 @@
-@import '../../app/main/base';
+@import '../../app/main/variables';
 
 div[ng-attr-donate] {
-	width: 500px;
 	
 	> h2, > h3, > h4 {
 		background: 

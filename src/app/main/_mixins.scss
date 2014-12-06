@@ -1,3 +1,4 @@
-@mixin condensed-font() {
-	transform: rotateX(20deg);
+@mixin condensed-font($m: 15, $ls: 1px) {
+	letter-spacing: $ls;
+	transform: rotateX(#{$m}deg);
 }

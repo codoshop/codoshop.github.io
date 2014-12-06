@@ -1,9 +1,15 @@
-@import 'base';
+@import 'variables';
 
 //
 // Typography
 // --------------------------------------------------
 
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+}
 
 // Headings
 // -------------------------
@@ -54,7 +60,7 @@ h5, .h5 { font-size: $font-size-h5; }
 h6, .h6 { font-size: $font-size-h6; }
 
 
-// Body text
+// Content text
 // -------------------------
 
 p {
@@ -76,4 +82,20 @@ p {
 small,
 .small {
   font-size: floor((100% * $font-size-small / $font-size-base));
+}
+
+// Links
+
+a {
+  color: $link-color;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus {
+    // @include tab-focus;
+  }
 }
