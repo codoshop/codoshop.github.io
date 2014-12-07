@@ -77,116 +77,134 @@ div[ng-attr-about] {
 			@include condensed-font();
 		}
 	}
-	.stats1 {
-		padding-top: 0;
-		display: flex;
-		font-weight: 600;
-		> div {
-			@include condensed-font();
-		}
-		// > div:first-child, > div:last-child {
-			
-		// }
-		.fc-fg-1 {
-			flex-grow: 1;
-		}
-	}
-	.stats2 {
-		height: 59px;
-		padding-top: 0;
-		padding-bottom: 2px;
-		display: flex;
-		// text-shadow:
-		// 	0 0 0.5px rgba(#fff, 0.3)
-		// ;
-		$color: rgba(#d4ff00, 0.8);
-		color: $color;
-		// background: 
-		// 		linear-gradient( rgba(#fff, 0.3) 0%, rgba(#fff, 0.3) )
-		// 	;
 
-		> div:nth-child(1) {
-			// display: none;
-			width: 60px;
-			margin: 8px 0 0 0;
-			// position: relative;
-			// top: 7px;
+	$codoshop-modal-bg-color-1: rgba(#000109, 0.4);
+
+	@mixin codoshop-stat-row($h: 39px, $fs: $font-size-h3) {
+		$color: rgba(#d4ff00, 0.8);
+		$spacing: 10px;
+
+		height: $h;
+		padding: 0 0 0 0;
+		display: flex;
+		text-shadow:
+			0 2px 0 rgba(#000, 0.6)
+		;
+		color: $color;
+		background: none;
+		
+		&:before, &:after {
+			content: '';
 			flex-shrink: 0;
-			// text-align: right;
-			text-transform: lowercase;
+		}
+		&:before {
+			width: 20px;
+			background: 
+				linear-gradient( $codoshop-modal-bg-color-1, $codoshop-modal-bg-color-1 )
+			;
+		}
+		&:after {
+			width: 3px;
+			background-color: $color;
+		}
+		> div {
+			background: 
+				linear-gradient( $codoshop-modal-bg-color-1, $codoshop-modal-bg-color-1 )
+			;
+		}
+		> div:nth-child(1) {
+			width: 80px;
+			padding: 5px 5px 0 0;
+			display: flex;
+			flex-direction: column;
+			flex-shrink: 0;
+			text-align: right;
+			text-transform: uppercase;
 			// line-height: 1;
 			> div:first-child {
-				display: none;
-				font-size: 12px;
-				font-weight: 100;
-				color: rgba(#fff, 0.7);
+				margin-bottom: 2px;
+				// display: none;
+				font-size: 9px;
+				font-weight: 200;
+
+				color: rgba(#fff, 0.8);
 				@include condensed-font();
+
 			}
 			> div:last-child {
-				
-				font-size: 18px;
+				// margin-bottom: 1px;
+				display: none;
+				// order: -1;
+				font-size: 11px;
 			}
 		}
 		> div:nth-child(2) {
 			width: 1px;
-			padding: 5px 0;
-			margin: 0 10px;
+			// padding: 3px 0;
+			// margin: 0 5px;
 			display: flex;
+			flex-direction: column;
 			flex-shrink: 0;
-			&:before {
+			background: none;
+			&:before, &:after {
 				content: '';
-				flex-grow: 1;
-				background: 
-					linear-gradient( rgba(#666, 0.2) 0%, rgba(#666, 0.2) )
-				;
+				height: 0px;
+				// flex-grow: 1;
+				background-color: $codoshop-modal-bg-color-1;
 			}
-			
+			> div {
+				flex-grow: 1;
+				// background: none;
+			}
 		}
-		> div:last-child {
-			margin: 2px 0 0 0;
-			display: flex;
-			// flex-direction: column;
+		// main text
+		> div:nth-last-child(2) {
+			padding: 0 5px;
+			// display: flex;
 			flex-grow: 1;
 			color: rgba(#fff, 0.8);
-			text-transform: lowercase;
+			// text-transform: lowercase;
 			> div:nth-child(1) {
-				font-size: 48px;
+				font-size: $fs;
 				font-weight: 200;
-				line-height: 1;
-				@include condensed-font(25, 0px);
-				text-shadow:
-					0 2px 0 rgba(#000, 0.6)
-				;
+				line-height: 1.2;
+				@include condensed-font(25, 1px);
+				
 			}
-			// > div:nth-child(2) {
-			// 	flex-grow: 1;
-			// }
-			// > div:last-child {
-			// 	margin: 0 0 0 0;
-			// 	font-size: 16px;
-			// 	font-weight: 100;
-			// 	// line-height: 1;
-			// 	color: $color;
-			// 	@include condensed-font();
-			// }
+		}
+		> div:nth-last-child(1) {
+			width: #{$h - 0};
+			height: #{$h - 0};
+			// border-top: 1px solid rgba(#fff, 0.2);
+			margin: 0px 0px 0px 0px;
+			flex-shrink: 0;
+			font-size: $font-size-h3;
+			color: rgba(#fff, 0.8);
+			// background-color: $codoshop-modal-bg-color-1;
 		}
 	}
-	.stats2 + .stats2 {
-		padding-bottom: 16px;
+	.stats1 {
+		@include codoshop-stat-row(19px, 12px);
 	}
+	.stats2 {
+		@include codoshop-stat-row();
+	}
+	// .stats2 + .stats2 {
+	// 	padding-bottom: 16px;
+	// }
 	// Title Bar
 	> header {
 		// padding-top: 40px !important;
-		// padding-bottom: 20px !important;
+		padding-bottom: 20px !important;
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 		display: flex;
-		background: none;
+		background: none !important;
 
-		> div:nth-child(1), > div:nth-child(3), > div:nth-child(4) {
-			// background: 
-			// 	linear-gradient( rgba(#666, 0.5) 0%, rgba(#666, 0.5) )
-			// ;
+		> div:nth-child(1), > div:nth-child(2), > div:nth-child(3), > div:nth-child(4) {
+			background: 
+				linear-gradient( rgba(#000109, 0.4) 0%, rgba(#000109, 0.4) )
+			;
 		}
 		> div:nth-child(1) {
 			width: 20px;
@@ -194,9 +212,11 @@ div[ng-attr-about] {
 		}
 		> div:nth-child(3) {
 			width: 20px;
+			// background-color: rgba(#000, 0.1);
 			
 		}
 		> div:nth-child(2) {
+			// padding-right: 19px;
 			display: flex;
 			flex-direction: column;
 			&:before, &:after {

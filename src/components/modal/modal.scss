@@ -76,7 +76,7 @@ div[ng-attr-modal] {
 		> div {
 			flex-grow: 1;
 			background: 
-				linear-gradient( rgba(#fff, 0.0) 0%, rgba(#fff, 0.0) )
+				linear-gradient( rgba(#000, 0.1) 0%, rgba(#000, 0.1) )
 			;
 		}
 		&:before, &:after {
@@ -87,6 +87,10 @@ div[ng-attr-modal] {
 				linear-gradient( rgba(#000109, 0.4) 0%, rgba(#000109, 0.4) )
 			;
 		}
+	}
+	.divider-two {
+		@extend .divider;
+		height: 2px;
 	}
 	// .divider + div {
 	// 	padding-top: 4px;
@@ -122,7 +126,7 @@ div[ng-attr-modal] {
 				font-size: 12px;
 				font-weight: 200;
 				letter-spacing: 1px;
-				text-transform: lowercase;
+				text-transform: capitalize;
 				text-decoration: none;
 				text-shadow:
 					none
