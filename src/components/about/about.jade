@@ -1,81 +1,67 @@
 div(ng-attr-about='')
 
 	//- .codoshop-subtitle "Quod nos facimus, nos."
-	
+	div
 
-	header.p-b-0
+	header
 		div
 		div
 			.fa.fa-download
 		div
 		div
 			div Codoshop
-			div A Text editor
-	
-	.divider
-		div
+			div A text editor
 
-	.flavor-text.p-t-0.p-b-0
-		p A free and open-source text editor for creative coding.	
+	div
+	//- .divider
+	//- 	div
+
+
 	//- .padding-t-0.padding-b-0 so far, there has been
 	//- div.padding-t-0.padding-b-0 there's been
-	
-	div
-		.condensed-font About this 
 
-	.divider-two
-		div
-	
+	//- div
+	//- 	.condensed-font About this 
+
+	//- .divider
+	//- 	div
+	.flavor-text
+		p "A free and open-source text editor made for creative programmers."
+
+	//- .divider
+	//- 	div
 
 	.stats2
+		.fa.fa-bomb
 		div
+			a(ui-sref='donate') 339,148
 			div downloads
-			div.fa.fa-bomb
-		div
-			div
-		div
-			div 839,233
-		div
-			.fa.fa-bomb
-			
-	.divider
-		div
+
+	//- .divider
+	//- 	div
+
 	.stats2
+		.fa.fa-heart
 		div
+			a(ui-sref='donate') 0
 			div donations
-			div.fa.fa-heart
-		div
-			div
-		div
-			div 0
-		div
-			.fa.fa-heart
 
-
+	div
 
 	.divider
 		div
 
 
 	.stats1
-		div
-			div price
-			div.fa.fa-heart
-		div
-		div
-			div Free
-		div
-	.divider
-		div
+		div price&nbsp;
+		div Free!
+
+	//- .divider
+	//- 	div
 	.stats1
-		div
-			div license
-			div.fa.fa-heart
-		div
-		div
-			div MIT
-		div
-			.fa.fa-download
+		div license&nbsp;
+		div MIT (open-source)
+
 	.divider
 		div
 
@@ -95,18 +81,23 @@ div(ng-attr-about='')
 
 	div
 		div Available For
-		div.white
-			span.fa.fa-apple
-			span mac
-		div.white
-			span.fa.fa-globe
-			span web
-		div.white
-			span.fa.fa-windows
-			span windows - donate/fork
-		div.white
-			span.fa.fa-linux
-			span linux - donate/fork
+		div
+			div.white
+				span &nbsp;&nbsp;&nbsp;&nbsp;
+				span.fa.fa-apple.ng-hide
+				span &#187; mac
+			div.white
+				span &nbsp;&nbsp;&nbsp;&nbsp;
+				span.fa.fa-globe.ng-hide
+				span &#187; web
+			div.white
+				span &nbsp;&nbsp;&nbsp;&nbsp;
+				span.fa.fa-windows.ng-hide
+				span &#187; windows - donate/fork to get it on windows
+			div.white
+				span &nbsp;&nbsp;&nbsp;&nbsp;
+				span.fa.fa-linux.ng-hide
+				span &#187; linux - donate/fork to get it on linux
 	//- ul
 	//- 	li
 	//- 		a(ui-sref='donate') download
