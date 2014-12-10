@@ -26,7 +26,7 @@ div[ng-attr-modal] {
 	> div > div {
 		> div, > header {
 			margin: 0;
-			padding: 0 20px 20px 20px;
+			padding: 0 20px 0 20px;
 			background: 
 				linear-gradient( rgba(#000109, 0.4) 0%, rgba(#000109, 0.4) )
 			;
@@ -67,25 +67,43 @@ div[ng-attr-modal] {
 	}
 
 	.divider {
-		height: 1px;
+		// height: 1px;
 		padding: 0;
 		// margin-bottom: 10px;
 		display: flex;
+		flex-direction: column;
 		background: none;
-
-		> div {
-			flex-grow: 1;
-			background: 
-				linear-gradient( rgba(#222, 0.5), rgba(#222, 0.5) )
-			;
-		}
 		&:before, &:after {
-			content: "";
-			width: 20px;
+			content: '';
 			flex-shrink: 0;
 			background: 
 				linear-gradient( rgba(#000109, 0.4) 0%, rgba(#000109, 0.4) )
 			;
+		}
+		&:before {
+			height: 10px;
+		}
+		&:after {
+			height: 9px;
+		}
+		> div {
+			height: 1px;
+			display: flex;
+			flex-shrink: 0;
+			> div {
+				flex-grow: 1;
+				background: 
+					linear-gradient( rgba(#222, 0.5), rgba(#222, 0.5) )
+				;
+			}
+			&:before, &:after {
+				content: '';
+				width: 20px;
+				flex-shrink: 0;
+				background: 
+					linear-gradient( rgba(#000109, 0.4) 0%, rgba(#000109, 0.4) )
+				;
+			}
 		}
 	}
 	.divider-two {
