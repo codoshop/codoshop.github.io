@@ -7,42 +7,42 @@ div(ng-attr-donate='')
 	.divider
 		div
 			div
-	.bar
+	.bar(ng-repeat='don in donList')
 		div $
-		input(type='text')
+		input(type='text').white
 		div
 			div
 				div(style='width: 230px')
 				div
-			.label windows support
-	.divider
-		div
-			div
+			.label {{don.label}}
+	//- .divider(ng-repeat-end='')
+	//- 	div
+	//- 		div
+	//- .bar
+	//- 	div $
+	//- 	div 0
+	//- 	div
+	//- 		div
+	//- 			div
+	//- 			div
+	//- 		.label linux support
+	//- .divider
+	//- 	div
+	//- 		div
+	//- .bar
+	//- 	div $
+	//- 	div 40
+	//- 	div
+	//- 		div
+	//- 			div
+	//- 			div
+	//- 		.label performance
+	//- .divider
+	//- 	div
+	//- 		div
 	.bar
 		div $
-		div 0
-		div
-			div
-				div
-				div
-			.label linux support
-	.divider
-		div
-			div
-	.bar
-		div $
-		div 40
-		div
-			div
-				div
-				div
-			.label performance
-	.divider
-		div
-			div
-	.bar
-		div $
-		div 0
+		input(type='text').white
 		div
 			.label > suggest something else?
 	.divider
@@ -50,7 +50,7 @@ div(ng-attr-donate='')
 			div
 	.bar
 		div $
-		div 0
+		input(type='text')
 		div
 			.label no suggestion
 	//- .bar

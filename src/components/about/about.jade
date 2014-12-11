@@ -6,7 +6,7 @@ div(ng-attr-about='')
 	header
 		div
 		div
-			.fa.fa-download
+			.fa.fa-download.dark-blue
 		div
 		div
 			div Codoshop
@@ -23,9 +23,9 @@ div(ng-attr-about='')
 	//- div
 	//- 	.condensed-font About this 
 
-	.divider
-		div
-			div
+	//- .divider
+	//- 	div
+	//- 		div
 	.flavor-text
 		p "A free and open-source text editor made for creative programmers."
 
@@ -38,8 +38,12 @@ div(ng-attr-about='')
 		div
 			a(ui-sref='donate') 339,148
 			div downloads
+
 	div
-		.cond downloads
+		p.cond.white
+			span.fa.fa-bomb.blue
+			span downloads
+
 	//- .divider
 	//- 	div
 	div
@@ -50,7 +54,9 @@ div(ng-attr-about='')
 			a(ui-sref='donate') 14
 			div donations
 	div
-		.cond donations
+		p.cond.white
+			span.fa.fa-heart.blue
+			span donations
 	//- div donations support development
 
 	.divider
