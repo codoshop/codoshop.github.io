@@ -24,7 +24,7 @@ div[ng-attr-modal] {
 		flex-grow: 1;
 	}
 	> div > div {
-		> div, > header {
+		> div, > header, > a {
 			margin: 0;
 			padding: 0 20px 0 20px;
 			background: 

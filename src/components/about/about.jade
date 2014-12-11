@@ -6,7 +6,8 @@ div(ng-attr-about='')
 	header
 		div
 		div
-			.fa.fa-download.dark-blue
+			div
+				.fa.fa-gears.dark-blue
 		div
 		div
 			div Codoshop
@@ -31,37 +32,58 @@ div(ng-attr-about='')
 
 	//- .divider
 	//- 	div
-	div
-		.cond Check out the GitHub repo.
-	.stats2
-		.fa.fa-bomb
-		div
-			a(ui-sref='donate') 339,148
-			div downloads
+	//- div
+	//- 	p.cond
+	//- 		span.fa.fa-arrow-right.blue
+	//- 		span.white &nbsp;download
+	//- 		span &nbsp;(or fork on GitHub.)
 
-	div
-		p.cond.white
-			span.fa.fa-bomb.blue
-			span downloads
+	//- .stats2
+	//- 	.fa.fa-bomb
+	//- 	div
+	//- 		a(ui-sref='donate') &nbsp;339,148
+	//- 		div downloads
+
+	//- div
+	//- 	p.cond.white
+	//- 		span.fa.fa-bomb.dark-blue
+	//- 		span.dark-blue downloads
 
 	//- .divider
 	//- 	div
-	div
-		.cond Donations support development.
-	.stats2
-		.fa.fa-heart
-		div
-			a(ui-sref='donate') 14
-			div donations
-	div
-		p.cond.white
-			span.fa.fa-heart.blue
-			span donations
-	//- div donations support development
+	//- div
+	//- 	p.cond
+	//- 		span.fa.fa-arrow-right.blue
+	//- 		span.white &nbsp;donate
+	//- 		span &nbsp;(donations support development.)
 
-	.divider
+	a(ui-sref='donate').stats2
 		div
 			div
+				.fa.fa-download.blue
+		div
+			div downloads
+			//- div &nbsp;(donations support development.)
+		div
+			//- span.fa.fa-heart
+			span 339,148
+
+	a(ui-sref='donate').stats2
+		div
+			div
+				.fa.fa-heart.blue
+		div
+			div donations
+			//- div &nbsp;(donations support development.)
+		div
+			//- span.fa.fa-heart
+			span 14
+
+	//- div donations support development
+
+	//- .divider
+	//- 	div
+	//- 		div
 
 
 	//- .stats1
@@ -93,7 +115,9 @@ div(ng-attr-about='')
 
 
 	div
-		div Available For
+		div
+			span.fa.fa-laptop
+			span &nbsp;Available For
 		div
 			div.white
 				span &nbsp;&nbsp;&nbsp;&nbsp;
