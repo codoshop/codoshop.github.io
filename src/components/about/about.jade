@@ -27,30 +27,18 @@ div(ng-attr-about='')
 	//- .divider
 	//- 	div
 	//- 		div
+
+
+
 	.flavor-text
 		p "A free and open-source text editor made for creative programmers."
 
-	//- .divider
-	//- 	div
-	//- div
-	//- 	p.cond
-	//- 		span.fa.fa-arrow-right.blue
-	//- 		span.white &nbsp;download
-	//- 		span &nbsp;(or fork on GitHub.)
-
-	//- .stats2
-	//- 	.fa.fa-bomb
-	//- 	div
-	//- 		a(ui-sref='donate') &nbsp;339,148
-	//- 		div downloads
+	.divider
+		div
+			div
 
 	//- div
-	//- 	p.cond.white
-	//- 		span.fa.fa-bomb.dark-blue
-	//- 		span.dark-blue downloads
-
-	//- .divider
-	//- 	div
+	//- 	p.cond About Codoshop:
 	//- div
 	//- 	p.cond
 	//- 		span.fa.fa-arrow-right.blue
@@ -59,26 +47,79 @@ div(ng-attr-about='')
 
 	a(ui-sref='donate').stats2
 		div
+			.fa.fa-download
+		div
 			div
-				.fa.fa-download.blue
-		div
-			div downloads
+				p.cond Check out the GitHub repo also.
+			div 248,148
+			div
+				div
+					div /
+					div.
+						Also, check out the <br/> github repo!
+				div
+				div
+					//- span.fa.fa-download
+					span downloads //
 			//- div &nbsp;(donations support development.)
+	//- div
+	//- 	p.cond Donations support development.
+	//- div
+	//- 	p.cond About Codoshop:
+	//- .divider
+	//- 	div
+	//- 		div
+
+	.divider
 		div
-			//- span.fa.fa-heart
-			span 339,148
+			div
 
 	a(ui-sref='donate').stats2
 		div
+			.fa.fa-heart.dark-blue
+		div
 			div
-				.fa.fa-heart.blue
+				p.cond Donations support development.
+			.dark-blue 14
+			.dark-blue
+				div
+					div /
+					div.
+						Donnations support <br/> development
+				div
+				div
+					//- span.fa.fa-heart
+					span donations //
+					span
+		
+	.divider
 		div
-			div donations
+			div
 			//- div &nbsp;(donations support development.)
+	div.flex.codoshop-modal-3
+		.codoshop-modal-big-icon.fa.fa-laptop
 		div
-			//- span.fa.fa-heart
-			span 14
+			div available for
+			div.white
+				span &nbsp;&nbsp;&nbsp;&nbsp;
+				span.fa.fa-apple.ng-hide
+				span &#187; mac
+			div.white
+				span &nbsp;&nbsp;&nbsp;&nbsp;
+				span.fa.fa-globe.ng-hide
+				span &#187; web
+			div.white
+				span &nbsp;&nbsp;&nbsp;&nbsp;
+				span.fa.fa-windows.ng-hide
+				span &#187; windows - donate/fork to get it on windows
+			div.white
+				span &nbsp;&nbsp;&nbsp;&nbsp;
+				span.fa.fa-linux.ng-hide
+				span &#187; linux - donate/fork to get it on linux
 
+	//- .divider-two
+	//- 	div
+	//- 		div
 	//- div donations support development
 
 	//- .divider
@@ -135,13 +176,15 @@ div(ng-attr-about='')
 				span &nbsp;&nbsp;&nbsp;&nbsp;
 				span.fa.fa-linux.ng-hide
 				span &#187; linux - donate/fork to get it on linux
-	//- ul
-	//- 	li
-	//- 		a(ui-sref='donate') download
-	//- 	li
-	//- 		a(ui-sref='donate') donate
-	//- 	li
-	//- 		a(ui-sref='donate') try it
+
+	footer
+		ul
+			li
+				a(ui-sref='donate') download
+			li
+				a(ui-sref='donate') donate
+			li
+				a(ui-sref='donate') more info
 	//- .btn-row
 	//- 	a(href='javascript:void(0)')
 	//- 		span
