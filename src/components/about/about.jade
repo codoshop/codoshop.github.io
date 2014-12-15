@@ -31,11 +31,19 @@ div(ng-attr-about='')
 
 
 	.flavor-text
-		p "A free and open-source text editor made for creative programmers."
+		p 
+			| A open-source 
+			span text editor 
+			| for creative coding
 
-	.divider
-		div
-			div
+	div
+		p
+			span
+			a(href='https://github.com/Codoshop/Codoshop-Web') Visit the GitHub repo.
+
+	//- .divider-5
+	//- 	div
+	//- 		div
 
 	//- div
 	//- 	p.cond About Codoshop:
@@ -45,137 +53,54 @@ div(ng-attr-about='')
 	//- 		span.white &nbsp;donate
 	//- 		span &nbsp;(donations support development.)
 
-	a(ui-sref='donate').stats2
-		div
-			.fa.fa-download
-		div
-			div
-				p.cond Check out the GitHub repo also.
-			div 248,148
-			div
-				div
-					div /
-					div.
-						Also, check out the <br/> github repo!
-				div
-				div
-					//- span.fa.fa-download
-					span downloads //
-			//- div &nbsp;(donations support development.)
+	//- ul.codoshop-modal-about
+
+
+
+	//- .divider-5
+	//- 	div
+	//- 		div
+
+
 	//- div
-	//- 	p.cond Donations support development.
-	//- div
-	//- 	p.cond About Codoshop:
-	//- .divider
-	//- 	div
-	//- 		div
+	//- 	p
+	//- 		a(href='https://github.com/Codoshop/Codoshop-Web') GitHub
 
-	.divider
-		div
-			div
+	div.codoshop-bg-2
+		.text-thing-1
+			div 8,148
+			div downloads
 
-	a(ui-sref='donate').stats2
-		div
-			.fa.fa-heart.dark-blue
-		div
-			div
-				p.cond Donations support development.
-			.dark-blue 14
-			.dark-blue
-				div
-					div /
-					div.
-						Donnations support <br/> development
-				div
-				div
-					//- span.fa.fa-heart
-					span donations //
-					span
-		
-	.divider
-		div
-			div
-			//- div &nbsp;(donations support development.)
-	div.flex.codoshop-modal-3
-		.codoshop-modal-big-icon.fa.fa-laptop
-		div
-			div available for
-			div.white
-				span &nbsp;&nbsp;&nbsp;&nbsp;
-				span.fa.fa-apple.ng-hide
-				span &#187; mac
-			div.white
-				span &nbsp;&nbsp;&nbsp;&nbsp;
-				span.fa.fa-globe.ng-hide
-				span &#187; web
-			div.white
-				span &nbsp;&nbsp;&nbsp;&nbsp;
-				span.fa.fa-windows.ng-hide
-				span &#187; windows - donate/fork to get it on windows
-			div.white
-				span &nbsp;&nbsp;&nbsp;&nbsp;
-				span.fa.fa-linux.ng-hide
-				span &#187; linux - donate/fork to get it on linux
-
-	//- .divider-two
-	//- 	div
-	//- 		div
-	//- div donations support development
-
-	//- .divider
-	//- 	div
-	//- 		div
-
-
-	//- .stats1
-	//- 	div price&nbsp;
-	//- 	div Free!
-
-	//- //- .divider
-	//- //- 	div
-	//- .stats1
-	//- 	div license&nbsp;
-	//- 	div MIT (open-source)
-
-	//- .divider
-	//- 	div
-	//- 		div
-
-	//- .stats1.padding-b-0
-	//- 	div.white Price
-	//- 	.fc-fg-1
-	//- 	.green Free
-	//- .divider
-	//- 	div
-	//- .stats1.padding-b-0
-	//- 	div.white License
-	//- 	.fc-fg-1
-	//- 	.green MIT
-	//- .divider
-	//- 	div
-
+		.text-thing-2
+			div 104
+			div donations
 
 	div
-		div
-			span.fa.fa-laptop
-			span &nbsp;Available For
-		div
-			div.white
-				span &nbsp;&nbsp;&nbsp;&nbsp;
-				span.fa.fa-apple.ng-hide
-				span &#187; mac
-			div.white
-				span &nbsp;&nbsp;&nbsp;&nbsp;
-				span.fa.fa-globe.ng-hide
-				span &#187; web
-			div.white
-				span &nbsp;&nbsp;&nbsp;&nbsp;
-				span.fa.fa-windows.ng-hide
-				span &#187; windows - donate/fork to get it on windows
-			div.white
-				span &nbsp;&nbsp;&nbsp;&nbsp;
-				span.fa.fa-linux.ng-hide
-				span &#187; linux - donate/fork to get it on linux
+		p.cond Codoshop is free to download, use, whatever. Use it to make stuff. You're limited only by your imagination. And also by the legal and ethical rules of whatever society you live in.
+
+	section.codoshop-platforms
+		//- div
+		//- 	.fa.fa-laptop
+		//- 	.cond Available
+		//- div
+		//- 	.cond
+		//- 		span Codoshop is currently available on
+		ul
+			li
+				.fa.fa-globe
+			li
+				.fa.fa-apple
+			li
+				.fa.fa-windows
+			li
+				.fa.fa-linux
+
+
+	//- .divider
+	//- 	div
+	//- 		div
+			//- div &nbsp;(donations support development.)
+
 
 	footer
 		ul
