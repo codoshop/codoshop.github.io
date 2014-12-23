@@ -4,15 +4,41 @@ div(ng-attr-about='')
 	div
 
 	header
-		div
+
 		div
 			div
-				.fa.fa-gears.dark-blue
+				.fa.fa-code
+		
 		div
 		div
 			div Codoshop
-			div A text editor
+			div a text editor for visual code
+		div
+		
 
+		div
+			div
+				div
+					//- span q
+					//- span u
+					//- span o
+					//- span d
+					//- br
+					//- span n
+					//- span o
+					//- span s
+					//- br
+					//- span f
+					//- span a
+					//- span c
+					//- span i
+					//- span m
+					//- span u
+					//- span s
+					//- br
+					//- span n
+					//- span o
+					//- span s
 	div
 	//- .divider
 	//- 	div
@@ -30,16 +56,18 @@ div(ng-attr-about='')
 
 
 
-	.flavor-text
-		p 
-			| A open-source 
-			span text editor 
-			| for creative coding
+	//- .flavor-text
+	//- 	p 
+	//- 		| a 
+	//- 		span text editor 
+	//- 		| for code
+	//- 		//- span.fa.fa-github
+	//- 	a(href='javascript:void(0)') try it
 
-	div
-		p
-			span
-			a(href='https://github.com/Codoshop/Codoshop-Web') Visit the GitHub repo.
+	//- div
+	//- 	p
+	//- 		span
+	//- 		a(href='https://github.com/Codoshop/Codoshop-Web') Visit the GitHub repo.
 
 	//- .divider-5
 	//- 	div
@@ -66,34 +94,85 @@ div(ng-attr-about='')
 	//- 	p
 	//- 		a(href='https://github.com/Codoshop/Codoshop-Web') GitHub
 
-	div.codoshop-bg-2
-		.text-thing-1
-			div 8,148
-			div downloads
-
-		.text-thing-2
-			div 104
-			div donations
-
+	//- .divider
+	//- 	div
+	//- 		div
 	div
-		p.cond Codoshop is free to download, use, whatever. Use it to make stuff. You're limited only by your imagination. And also by the legal and ethical rules of whatever society you live in.
+		div
+			.cond free, open-source, multi-platform
+			ul
+				li
+					.fa.fa-globe
+				li
+					.fa.fa-apple
+				li
+					.fa.fa-windows
+				li
+					.fa.fa-linux
+			div
+			a(href='javascript:void(0)').cond try it >
+				//- span.fa.fa-angle-right
+				//- span.fa.fa-angle-right
+				//- span.fa.fa-angle-right
 
-	section.codoshop-platforms
-		//- div
-		//- 	.fa.fa-laptop
-		//- 	.cond Available
-		//- div
-		//- 	.cond
-		//- 		span Codoshop is currently available on
-		ul
-			li
-				.fa.fa-globe
-			li
-				.fa.fa-apple
-			li
-				.fa.fa-windows
-			li
-				.fa.fa-linux
+	//- .divider
+	//- 	div
+	//- 		div
+
+	//- .text-thing-1
+	//- 	div
+	//- 		.fa.fa-download
+	//- 	div
+	//- 		div free / open-source
+	//- 	div try it
+
+	.text-thing-1
+		div
+			div
+			.fa.fa-download
+		div
+			div {{donStats.downloads}}
+		div downloads
+
+
+	.text-thing-2
+		div
+			div
+			a(ui-sref='donate')
+				.fa.fa-heart
+		div
+			span
+			span {{donStats.donations}}
+		div donations
+
+	.text-thing-2
+		div
+			div
+			.fa.fa-heart
+		div
+			span
+			span {{donStats.subscribers}}
+		div subscribers
+	//- .divider
+	//- 	div
+	//- 		div
+	
+
+	//- section.codoshop-copy
+	//- 	p.cond Codoshop currently supports these platforms
+
+	//- div(style='padding-top: 5px; color: #444; font-weight: 900; font-size: 14px;') 8,148 // 147
+
+	//- section.codoshop-platforms
+	//- 	ul
+	//- 		li
+	//- 			.fa.fa-globe
+	//- 		li
+	//- 			.fa.fa-apple
+	//- 		li
+	//- 			.fa.fa-windows
+	//- 		li
+	//- 			.fa.fa-linux
 
 
 	//- .divider
@@ -105,11 +184,9 @@ div(ng-attr-about='')
 	footer
 		ul
 			li
-				a(ui-sref='donate') download
-			li
-				a(ui-sref='donate') donate
-			li
 				a(ui-sref='donate') more info
+			li
+				a(ui-sref='donate') try it
 	//- .btn-row
 	//- 	a(href='javascript:void(0)')
 	//- 		span

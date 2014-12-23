@@ -9,6 +9,9 @@ html, body {
 }
 
 body {
+	// display: flex;
+	// flex-direction: column;
+
 	background-color: $body-bg;
 	// @include background(
 		
@@ -37,42 +40,7 @@ body {
 
 }
 
-body > main {
-	width: 100%;
-	height: 100%;
-	position: relative;
 
-	> div:first-child {
-		width: 100%;
-		height: 100%;
-		position: relative;
-
-		> div {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			&:nth-child(1) {
-				z-index: 1;
-			}
-			&:nth-child(2) {
-				z-index: 2;
-			}
-		}
-		
-	}
-
-}
-
-	.codoshop {
-		width: calc(100% - 200px);
-		height: calc(100% - 150px);
-	}
 
 
 
