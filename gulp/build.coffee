@@ -23,13 +23,13 @@ reload 	= $.browserSync.reload
 # ********
 o 			= {}
 o.module 	= 'codoshopWebsite'
-o.dir =
+o.dir 		=
 	src: 'src'
 	tmp: '.tmp'
 	dist: 'dist'
-o.partials =
+o.partials 	=
 	filename: 'templates.js'
-	dest: o.dir.tmpDir + '/components/templates'
+	dest: o.dir.tmp + '/components/templates'
 
 
 # ********
@@ -100,7 +100,7 @@ gulp.task 'html:base', ['wiredep'], ->
 
 # Process html partials (your html templates that live in the app and components directories)
 gulp.task 'html:partials', ->
-	gulp.src(o.dir.src + '/{app,components}/**/*.html')
+	gulp.src o.dir.src + '/{app,components}/**/*.html'
 
 	.pipe $.addSrc(o.dir.src + '/{app,components}/**/*.jade')
 	.pipe $.iff('**/*.jade', do () ->
@@ -112,7 +112,7 @@ gulp.task 'html:partials', ->
 			]
 		)
 
-	.on('error', handleError)
+	.on 'error', handleError
 	.pipe $.size()
 
 
@@ -121,13 +121,19 @@ gulp.task 'html:partials:js', ['html:partials'], ->
 	gulp.src([
 		o.dir.tmp + '/{app,components}/**/*.html'
 		o.dir.src + '/{app,components}/**/*.html'
-	]).pipe($.minifyHtml(
+	])
+	.pipe($.minifyHtml(
 		empty: true
 		spare: true
 		quotes: true
-	)).pipe($.angularTemplatecache(o.partials.filename,
+	))
+	.pipe($.angularTemplatecache(
+		o.partials.filename,
 		module: o.module
-	)).pipe(gulp.dest(o.partials.dest)).on('error', handleError).pipe $.size()
+	))
+	.pipe gulp.dest(o.partials.dest)
+	.on 'error', handleError
+	.pipe $.size()
 
 
 # Shortcut task to process all html for development with size logging and brower-sync reload.
@@ -149,11 +155,12 @@ gulp.task 'build:html', [
 	'scripts'
 	'html:base'
 	'html:partials:js'
-], ->
+], -> do (
 	htmlBaseFilter = $.filter('*.html')
 	jsFilter = $.filter('**/*.js')
 	cssFilter = $.filter('**/*.css')
 	assets = undefined
+	) ->
 	
 	gulp.src([
 			o.dir.tmp + '/*.html'
@@ -210,7 +217,12 @@ gulp.task 'images', ->
 		.pipe reload(stream: true)
 
 gulp.task 'fonts', ->
-	gulp.src($.mainBowerFiles()).pipe($.filter('**/*.{eot,svg,ttf,woff}')).pipe($.flatten()).pipe(gulp.dest(o.dir.dist + '/fonts')).pipe($.size()).pipe reload(stream: true)
+	gulp.src $.mainBowerFiles()
+		.pipe $.filter('**/*.{eot,svg,ttf,woff}')
+		.pipe $.flatten()
+		.pipe gulp.dest(o.dir.dist + '/fonts')
+		.pipe $.size()
+		.pipe reload(stream: true)
 
 gulp.task 'misc', ->
 	gulp.src(o.dir.src + '/**/*.ico').pipe(gulp.dest(o.dir.dist)).pipe($.size()).pipe reload(stream: true)
@@ -228,3 +240,8 @@ gulp.task 'build', [
 	'fonts'
 	'misc'
 ]
+
+gulp.task 'deploy', ['build'], () ->
+    gulp.src './dist/**/*'
+       .pipe $.ghPages()
+
