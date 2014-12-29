@@ -10,6 +10,7 @@
 angular
 	.module('codoshopWebsite')
 	.directive 'codoshopWebsitee', () ->
+		
 		link: (scope, el, attrs, ctrls) ->
 
 			scope.openFiles =
@@ -104,7 +105,14 @@ angular
 			return
 	.directive 'main', () ->
 		templateUrl: 'app/main/main.html'
-		link: (scope, el, attrs, ctrls) ->
+		controller: ($scope) ->
+
+			$scope.reset = do (s = $scope) -> () ->
+				s.codoshopVM.dialog.show = true
+				return
+
+			return
+		link: (scope, el, attrs, ctrls) -> do (c = null) ->
 
 			scope.slickConfig =
 				dots: true
@@ -126,7 +134,18 @@ angular
 				src: 'http://i1-linux.softpedia-static.com/screenshots/Mac-OS-X-theme_1.jpg'
 			]
 
-			scope.codoshopVM ?= {} 
-			scope.codoshopVM.modal =
+
+			c = $('div[ng-attr-codoshop]')
+			# c.css 'width', $(window).width() - 200
+			# c.css 'height', $(window).height() - 200
+			c.css 'left', ($(window).width() / 2) - (c.width()/2)
+			c.css 'top', ($(window).height() / 2) - (c.height()/2)
+
+			scope.codoshopVM ?= {}
+			scope.codoshopVM.dialog ?= {}
+			scope.codoshopVM.dialog =
 					show: true
+					modal: true
+					parent: $('.modal-wrapper')
+
 			return

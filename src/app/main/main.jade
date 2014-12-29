@@ -1,8 +1,13 @@
 div
-	div
-		.codoshop(ng-attr-codoshop='', ng-attr-resizable='all')
-	div(ng-show='codoshopVM.modal.show')
-		.modal(ng-attr-modal='')
+	div(ng-show='codoshopVM.dialog.show == false')
+		ul
+			li
+				a(href='#', onclick='return false', ng-click='reset()').reset-btn reset
+	.codoshop(ng-attr-codoshop='', ng-attr-resizable='all')
+	.modal-wrapper(ng-show='codoshopVM.dialog.show == true')
+	//- .modal(ng-attr-modal='')
+
+
 .marketing
 	div
 		h2 What is Codoshop?
@@ -38,8 +43,6 @@ div
 			p.
 				For those in the electronic arts, Codoshop is capital in creativity! - science fiction author Isiah Azimov
 			p.
-				Codoshop is a bicycle for the mind, which helps me code the opposite - a sentient AI for my Schwin. - comedian and entrepreneur Bill Kosdy
-			p.
-				Remember that scene in the Matrix where Neo was like "We need guns" and then all those guns appeared? Codoshop is nothing like that.
-				It's decent, though.
+				Codoshop is a bicycle for the mind, which helps me code the opposite - a sentient AI for my Schwin. - comedian and entrepreneur Ralph McKenzie
+
 

@@ -2,11 +2,14 @@
 
 angular
 	.module 'codoshopModal', ['codoshopAbout', 'codoshopDonate']
-	.directive 'modal', () ->
+	.directive 'dialog', () ->
 		templateUrl: 'components/modal/modal.html'
-		link: (scope, el, attrs, ctrls) -> do (asd = null) ->
+		link: (scope, el, attrs, ctrls) -> do (parent = null) ->
 			
-			scope.tryIt = do (scope) -> () ->
-				scope.codoshopVM.modal.show = false;
+			scope.tryIt = do (s = scope) -> () ->
+				s.codoshopVM.dialog.show = false
 				return
+
+			parent = scope.codoshopVM.dialog.parent
+			el.appendTo parent if parent
 			return

@@ -40,77 +40,20 @@ div(ng-attr-about='')
 					//- span o
 					//- span s
 	div
-	//- .divider
-	//- 	div
-
-
-	//- .padding-t-0.padding-b-0 so far, there has been
-	//- div.padding-t-0.padding-b-0 there's been
-
-	//- div
-	//- 	.condensed-font About this 
 
 	//- .divider
 	//- 	div
 	//- 		div
 
 
-
-	//- .flavor-text
-	//- 	p 
-	//- 		| a 
-	//- 		span text editor 
-	//- 		| for code
-	//- 		//- span.fa.fa-github
-	//- 	a(href='javascript:void(0)') try it
-
-	//- div
-	//- 	p
-	//- 		span
-	//- 		a(href='https://github.com/Codoshop/Codoshop-Web') Visit the GitHub repo.
-
-	//- .divider-5
-	//- 	div
-	//- 		div
-
-	//- div
-	//- 	p.cond About Codoshop:
-	//- div
-	//- 	p.cond
-	//- 		span.fa.fa-arrow-right.blue
-	//- 		span.white &nbsp;donate
-	//- 		span &nbsp;(donations support development.)
-
-	//- ul.codoshop-modal-about
-
-
-
-	//- .divider-5
-	//- 	div
-	//- 		div
-
-
-	//- div
-	//- 	p
-	//- 		a(href='https://github.com/Codoshop/Codoshop-Web') GitHub
-
-	//- .divider
-	//- 	div
-	//- 		div
 	div
 		div
 			.cond free, open-source, multi-platform
 			ul
 				li
 					.fa.fa-globe
-				li
-					.fa.fa-apple
-				li
-					.fa.fa-windows
-				li
-					.fa.fa-linux
 			div
-			a(href='javascript:void(0)').cond try it >
+			a(href='#', onclick='return false', ng-click='tryIt()').cond try it
 				//- span.fa.fa-angle-right
 				//- span.fa.fa-angle-right
 				//- span.fa.fa-angle-right
@@ -126,33 +69,63 @@ div(ng-attr-about='')
 	//- 		div free / open-source
 	//- 	div try it
 
+	.text-thing-0
+
+		div
+			div
+				div {{donStats.downloads}}
+
+		div
+			div
+				div downloads
+
+		.codoshop-small-btn-column
+			//- .fa.fa-download
+			div
+				div
+					.fa.fa-apple.codoshop-btn-color-1
+			div
+				div
+					.fa.fa-windows
+
+		.codoshop-small-btn-column
+			div
+				div
+					.fa.fa-globe
+			div
+				div
+					.fa.fa-linux
+
+
 	.text-thing-1
+		
 		div
 			div
-			.fa.fa-download
-		div
-			div {{donStats.downloads}}
-		div downloads
+				div {{donStats.donations}}
 
+		div 
+			div 
+				div donations
 
-	.text-thing-2
-		div
+		.codoshop-single-btn
 			div
-			a(ui-sref='donate')
-				.fa.fa-heart
-		div
-			span
-			span {{donStats.donations}}
-		div donations
+				a(ui-sref='donate')
+					.fa.fa-heart
 
 	.text-thing-2
+		
 		div
 			div
-			.fa.fa-heart
+				div {{donStats.subscribers}}
+
 		div
-			span
-			span {{donStats.subscribers}}
-		div subscribers
+			div 
+				div subscribers
+
+		.codoshop-single-btn
+			div
+				a(ui-sref='donate').codoshop-btn-color-3
+					.fa.fa-heart
 	//- .divider
 	//- 	div
 	//- 		div
